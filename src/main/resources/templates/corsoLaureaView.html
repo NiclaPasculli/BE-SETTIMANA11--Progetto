@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Informazioni corso inserite</h1>
+	
+	<p>
+		Codice:<span th:text="${codice}"></span>
+	</p>
+	<p>
+		Nome:<span th:text="${nome}"></span>
+	</p>
+	<p>
+		Indirizzo:<span th:text="${indirizzo}"></span>
+	</p>
+	<p>
+		Numero Esami:<span th:text="${numeroEsami}"></span>
+	</p>
+	
+	<table>
+		<tr>
+			<td><a href="corso">Aggiungi un altro corso</a></td>
+		</tr>
+		<tr>
+			<td><a href="listacorsi">Lista Corsi</a></td>
+		</tr>
+	</table>
+
+</body>
+</html>

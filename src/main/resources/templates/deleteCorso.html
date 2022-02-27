@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Inserisci matricola Studente da eliminare</h1>
+	<form action="#" th:action="@{/deleteCorso}" th:object="${corsoLaurea}"
+		method="get">
+		
+	
+	<p>
+			Codice:<input type="text" th:field="*{codice}" />
+		</p>
+		<p>
+			<input type="submit" value="Submit"  />
+		</p>
+	
+	</form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Informazioni studente inserite</h1>
+	
+	<div th:each="s: ${studente}">
+	
+	<p>
+		Matricola:<span th:text="${s.matricola}"></span>
+	</p>
+	<p>
+		Nome:<span th:text="${s.nome}"></span>
+	</p>
+	<p>
+		Cognome:<span th:text="${s.cognome}"></span>
+	</p>
+	<p>
+		Data di Nascita:<span th:text="${s.dataNascita}"></span>
+	</p>
+	<p>
+		Email:<span th:text="${s.email}"></span>
+	</p>
+	<p>
+		Indirizzo:<span th:text="${s.indirizzo}"></span>
+	</p>
+	<p>
+		Città:<span th:text="${s.citta}"></span>
+	</p>
+	<p>
+		Corso di Laurea:<span th:text="${s.corsoLaurea}"></span>
+	</p>
+	</div>
+	<table>
+		<tr>
+			<td><a href="studente">Aggiungi un altro studente</a></td>
+		</tr>
+		<tr>
+			<td><a href="listastudenti">Lista Studenti</a></td>
+		</tr>
+	</table>
+	
+
+</body>
+</html>

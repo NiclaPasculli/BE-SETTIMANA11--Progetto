@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Lista Corsi</h1>
+
+<div th:each="c: ${listaCorsi}">
+		<div th:text="${c.toString()}"></div>
+</div>
+<table>
+		<tr>
+			<td><a href="corso">Aggiungi corso</a></td>
+		</tr>
+		<tr>
+			<td><a href="modificaCorso">Modifica un corso</a></td>
+		</tr>
+		<tr>
+			<td><a href="eliminaCorso">Elimina corso</a></td>
+		</tr>
+		<tr>
+			<td><a href="segreteria">Home</a></td>
+		</tr>
+		</table>
+
+</body>
+</html>

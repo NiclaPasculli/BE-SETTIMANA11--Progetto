@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Inserisci i dettagli dello studente</h1>
+	<form action="#" th:action="@{/updateStudente}" th:object="${studente}"
+		method="get">
+		<p>
+			Matricola:<input type="text" th:field="*{matricola}" />
+		</p>
+		<p>
+			Nome:<input type="text" th:field="*{nome}" />
+		</p>
+		<p>
+			Cognome:<input type="text" th:field="*{cognome}" />
+		</p>
+		<p>
+			Data di nascita:<input type="date" pattern="YYY-mm-DD" th:field="*{dataNascita}"
+				id="datanascita">
+		</p>
+		<p>
+			Email:<input type="text" th:field="*{email}" />
+		</p>
+		<p>
+			Indirizzo:<input type="text" th:field="*{indirizzo}" />
+		</p>
+		<p>
+			Città:<input type="text" th:field="*{citta}" />
+		</p>
+		<div>
+			Corso di Laurea: <select th:object="${studente}" th:field="*{corsoLaurea}">
+				<option value="">Seleziona un corso</option>
+				<option th:each="c: ${listaCorsi}" th:value="${c.codice}"
+					th:text="${c.nome}"></option>
+			</select>
+		</div>
+		
+		<p>
+			<input type="submit" value="Submit" /> <input type="reset"
+				value="Reset" />
+		</p>
+	</form>
+	
+	<table>
+		
+		<tr>
+			<td><a href="listastudenti">Lista Studenti</a></td>
+		</tr>
+	</table>
+
+</body>
+</html>
